@@ -76,3 +76,19 @@ CIF: "B86682",
 address: "Calle Ladio, 52",
 url_web:"https://www.microsoft.com/"
 */
+
+
+
+/*
+En la consola de MongoDB Compass ir a mi base de datos:
+Ver en dbMongo.js: mongoose.connect("mongodb://localhost:27017/mydb" --> mydb
+
+Escribir:
+db.providers.insertOne({
+    id: 4,
+    company_name: "Microsoft",
+    CIF: "B86682",
+    address: "Calle Ladio, 52",
+    url_web:"https://www.microsoft.com/"
+})
+*/

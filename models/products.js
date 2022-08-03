@@ -108,3 +108,19 @@ price: 45.00,
 description: "Las aventuras de un príncipe que se convierte en diversos animales",
 provider:
 */
+
+
+
+/*
+En la consola de MongoDB Compass ir a mi base de datos:
+Ver en dbMongo.js: mongoose.connect("mongodb://localhost:27017/mydb" --> mydb
+
+Escribir:
+db.products.insertOne({
+    id: 10,
+    title: "Golden Boy",
+    price: 45.00,
+    description: "Las aventuras de un príncipe que se convierte en diversos animales",
+    provider: ObjectId("id del provider")
+})
+*/
