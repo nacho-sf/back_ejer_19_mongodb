@@ -1,13 +1,12 @@
-const fetch =  require("node-fetch");
 const Product = require("../models/products");
+
 
 const getProducts = async (req, res) => {
 // FIND ALL PRODUCTS
     try {
-        let products = await Product.
-        find({}).
-        populate('provider').
-        sort({'id':'asc'});
+        let products = await Product.find({}, '-_id')
+        .populate('provider', 'company_name -_id')
+        .sort({'id':'asc'});
         res.status(200).json( {products});
     }
     catch (error) {

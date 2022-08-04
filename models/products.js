@@ -1,4 +1,5 @@
 const mongoose = require('mongoose');
+require('./providers')
 
 const objectSchema = {
     id: { 
@@ -18,10 +19,7 @@ const objectSchema = {
         type: String, 
         required: true 
     },
-    provider:{
-        type: mongoose.Schema.Types.ObjectId,
-        ref: 'provider'
-    },
+    provider:{type: mongoose.Schema.Types.ObjectId, ref: 'Provider'}
 
 };
 // Crear el esquema
