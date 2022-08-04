@@ -1,5 +1,4 @@
 const mongoose = require('mongoose');
-//mongoose.connect('mongodb://localhost:27017/mydb'); // Prueba para ver si existe conexión (ya no se necesita)
 
 const objectSchema = {
     id: { 
@@ -21,7 +20,7 @@ const objectSchema = {
     },
     provider:{
         type: mongoose.Schema.Types.ObjectId,
-        ref: 'Provider'
+        ref: 'provider'
     },
 
 };
@@ -46,6 +45,9 @@ const p = new Product({
 
 p.save().then((data) => console.log(data))
 */
+
+
+
 
 /*
 id: 1,

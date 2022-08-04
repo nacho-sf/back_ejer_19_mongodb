@@ -1,6 +1,5 @@
 const mongoose = require('mongoose');
 
-
 const objectSchema = {
     id: { 
         type: Number, 
@@ -21,18 +20,13 @@ const objectSchema = {
     },
     url_web:{
         type: String,
-        validate: {
-            validator: function(url){
-                return url.indexOf('.jpg') != -1;
-            }, 
-            message: "Porfa, sólo imágenes JPG"
-        }
+        required: true
     }
 };
 // Crear el esquema
 const providerSchema = mongoose.Schema(objectSchema);
 // Crear el modelo --> Colección
-const Provider = mongoose.model('Provider', providerSchema);
+const Provider = mongoose.model('provider', providerSchema);
 
 module.exports = Provider;
 
@@ -49,6 +43,10 @@ const p = new Provider({
 
 p.save().then((data) => console.log(data))
 */
+
+
+
+
 
 
 /*
