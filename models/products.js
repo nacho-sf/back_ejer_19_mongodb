@@ -31,6 +31,19 @@ module.exports = Product;
 
 
 
+/*
+// Modelo para introducir producto en el body de postman
+{
+    "id": ,
+    "title": "",
+    "price": ,
+    "description": "",
+    "provider":""
+}
+*/
+
+
+
 // Insertar un producto con Mongoose (a MongoDB):
 /*
 const p = new Product({
